@@ -15,6 +15,13 @@ Used JSON data source as endpoint (backend). All the data is stored and handled 
 - Search results are the same for every query that’s entered.
 - Search results are shown only after 2 or more characters
 
+### Technology Used
+
+- ⭐️ React
+- ⭐️ Redux
+- ⭐️ CSS
+- ⭐️ TypeScript
+
 ### How to install this?
 
 - clone the app
