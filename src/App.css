@@ -8,6 +8,7 @@ body {
   padding: 0;
   background-color: rgb(248, 246, 244);
 }
+/* NavBar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -36,6 +37,7 @@ body {
   position: absolute;
   z-index: -1;
 }
+
 /* Search Box */
 .search-container {
   padding: 5px;
@@ -72,4 +74,54 @@ body {
   border: 1px solid rgb(253, 165, 2);
   border-radius: 30px;
   background-position: 97% center;
+}
+
+/* Product List dropdown */
+.search-items {
+  margin: 0;
+  padding-left: 29%;
+  padding-right: 23%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+.card {
+  background-color: white;
+  width: 100%;
+}
+
+/* each  product */
+.card div a {
+  color: black;
+  text-decoration: none;
+}
+
+.card:hover {
+  background-color: rgb(241, 227, 199);
+}
+
+input:focus {
+  outline-width: 0;
+}
+
+.content {
+  width: 100%;
+  overflow: hidden;
+}
+
+.content img {
+  padding: 7px;
+  margin-right: 5px;
+  width: 100px;
+  float: left;
+  border: 0;
+}
+
+.content p {
+  margin-left: 10px;
+  display: block;
+  font-size: 1rem;
+}
+.content span {
+  color: gray;
 }
