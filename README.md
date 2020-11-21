@@ -17,10 +17,10 @@ Used JSON data source as endpoint (backend). All the data is stored and handled 
 
 ### Technology Used
 
-- ⭐️ React
-- ⭐️ Redux
-- ⭐️ CSS
-- ⭐️ TypeScript
+⭐️ React
+⭐️ Redux
+⭐️ CSS
+⭐️ TypeScript
 
 ### How to install this?
 
