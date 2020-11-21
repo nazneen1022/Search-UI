@@ -1,10 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getData } from "../../store/Source/selectors";
 import { setProducts } from "../../store/Products/actions";
 import "../../App.css";
 
-export default function SearchBar() {
+type Props = {
+  searchText: string;
+  setSearchText: (value: string) => void;
+};
+
+export default function SearchBar(props: Props) {
   const dispatch = useDispatch();
   const data = useSelector(getData);
 
@@ -20,6 +25,8 @@ export default function SearchBar() {
           type="text"
           size={50}
           placeholder="Find a product.."
+          value={props.searchText}
+          onChange={(event) => props.setSearchText(event.target.value)}
         />
       </div>
     </div>
