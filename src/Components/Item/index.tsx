@@ -7,6 +7,18 @@ type Props = {
 };
 
 export default function Item(props: Props) {
-  console.log("props:", props);
-  return <div className="content">test</div>;
+  return (
+    <div className="content">
+      {props && (
+        <a href={props.productDetails.url}>
+          <img src={props.productDetails.image} alt="noimage" />
+          <p>
+            {props.productDetails.generalized_title}
+            <br />
+            <span>{props.productDetails.brand_name}</span>
+          </p>
+        </a>
+      )}
+    </div>
+  );
 }
