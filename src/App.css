@@ -49,7 +49,7 @@ body {
   transition: transform 250ms ease-in-out;
   font-size: 1rem;
   line-height: 18px;
-  background-image: url("./Images/search-icon.png");
+  /*background-image: url("./Images/search-icon.png");*/
   color: rgb(253, 165, 2);
   background-color: #fff;
   background-repeat: no-repeat;
@@ -97,7 +97,7 @@ body {
 }
 
 .card:hover {
-  background-color: rgb(241, 227, 199);
+  background-color: rgb(240, 232, 223);
 }
 
 input:focus {
