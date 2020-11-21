@@ -33,7 +33,7 @@ function App() {
         <SearchBar searchText={searchText} setSearchText={handleSearchText} />
         <div className="navbar-links"></div>
       </div>
-      <div>{display && <ProductList />}</div>
+      <div>{display && <ProductList searchText={searchText} />}</div>
     </div>
   );
 }

@@ -1,13 +1,28 @@
 import React from "react";
-import { Product } from "../../models/product";
 import { useSelector } from "react-redux";
+import { Product } from "../../models/product";
 import { getProducts } from "../../store/Products/selectors";
 
 import "../../App.css";
 import Item from "../Item";
+type Props = {
+  searchText: string;
+};
 
-export default function ProductList() {
+export default function ProductList(props: Props) {
   const products = useSelector(getProducts);
+
+  // Filtered products based on search term
+  // Use this code in real-time scenario
+  /*
+  const filteredProducts = products.filter((product: Product) => {
+    const productTitle = product.details.generalized_title.toLowerCase();
+    return productTitle.indexOf(props.searchText.toLowerCase()) !== -1;
+  });
+
+  console.log("filteredProducts:", filteredProducts);
+  */
+
   return (
     <div>
       {products && (
