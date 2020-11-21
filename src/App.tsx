@@ -7,8 +7,8 @@ import ProductList from "./Components/ProductList";
 
 function App() {
   const dispatch = useDispatch();
-  const [display, setDisplay] = useState<boolean>(false);
 
+  const [display, setDisplay] = useState<boolean>(false);
   const [searchText, setSearchText] = useState<string>("");
 
   const handleSearchText = (value: string) => {

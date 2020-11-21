@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getData } from "../../store/Source/selectors";
 import { setProducts } from "../../store/Products/actions";
@@ -23,7 +23,7 @@ export default function SearchBar(props: Props) {
         <input
           className="search-input"
           type="text"
-          size={50}
+          size={70}
           placeholder="Find a product.."
           value={props.searchText}
           onChange={(event) => props.setSearchText(event.target.value)}
