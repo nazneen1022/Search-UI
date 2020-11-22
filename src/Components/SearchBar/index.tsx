@@ -7,6 +7,7 @@ import "../../App.css";
 type Props = {
   searchText: string;
   setSearchText: (value: string) => void;
+  show: (value: boolean) => void;
 };
 
 export default function SearchBar(props: Props) {
@@ -27,6 +28,8 @@ export default function SearchBar(props: Props) {
           placeholder="Find a product.."
           value={props.searchText}
           onChange={(event) => props.setSearchText(event.target.value)}
+          onFocus={() => props.show(true)}
+          onBlur={() => props.show(false)}
         />
       </div>
     </div>

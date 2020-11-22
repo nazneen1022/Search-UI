@@ -15,9 +15,16 @@ function App() {
     setSearchText(value);
   };
 
+  const handleDisplay = (value: boolean) => {
+    if (value === false && searchText.length <= 2) setDisplay(value);
+    else {
+      if (searchText.length > 2) setDisplay(value);
+    }
+  };
+
   useEffect(() => {
     // set to display the dropdown list only when search string
-    // is aof minimun 2 characters
+    // is of minimun 2 characters
     if (searchText.length > 2) setDisplay(true);
     else setDisplay(false);
   }, [searchText]);
@@ -30,7 +37,11 @@ function App() {
     <div>
       <div className="navbar">
         <div className="title">Deal</div>
-        <SearchBar searchText={searchText} setSearchText={handleSearchText} />
+        <SearchBar
+          show={handleDisplay}
+          searchText={searchText}
+          setSearchText={handleSearchText}
+        />
         <div className="navbar-links"></div>
       </div>
       <div>{display && <ProductList searchText={searchText} />}</div>
